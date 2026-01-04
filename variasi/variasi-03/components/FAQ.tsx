@@ -35,8 +35,8 @@ const FAQ: React.FC = () => {
       a: "Sangat aman. Melalui akun yang benar, data Anda tidak akan digunakan oleh Google untuk melatih model AI mereka dan tetap bersifat privat [17, 18]."
     },
     {
-      q: "Bagaimana cara mendapatkan bonus akun Pro-nya?",
-      a: "Bonus akan diberikan langsung kepada seluruh peserta yang hadir secara live saat sesi webinar berakhir."
+      q: "Apakah strategi ini relevan untuk semua bidang keilmuan?",
+      a: "Sangat relevan. Strategi prompting yang diajarkan bersifat universal dan telah teruji berhasil diterapkan di berbagai bidang mulai dari Sosial Humaniora, Saintek, Kesehatan, hingga Pendidikan. Anda akan belajar pola berpikir logisnya."
     }
   ];
 

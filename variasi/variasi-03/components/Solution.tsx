@@ -3,10 +3,10 @@ import { CheckCircle2, Sparkles } from 'lucide-react';
 
 const Solution: React.FC = () => {
   const benefits = [
-    "Argumentasi Anti-Gagal: Buktikan celah riset Anda secara ilmiah hanya dalam hitungan detik [8].",
-    "Literasi Jurnal 10x Lebih Cepat: Pahami isi 300 jurnal sekaligus tanpa harus membaca satu per satu dari halaman awal [9].",
-    "Asisten Pintar Pribadi: Jawaban riset yang 100% akurat karena hanya mengambil data dari dokumen tepercaya pilihan Anda [10].",
-    "Mental Lebih Tenang: Selesaikan draf publikasi internasional tanpa harus mengorbankan waktu tidur [11]."
+    "Paham Ratusan Jurnal dalam Hitungan Menit: Tidak perlu baca manual satu per satu, AI akan merangkum inti sari literatur untuk Anda.",
+    "Menemukan Research Gap Valid: Otomatis mendeteksi celah penelitian yang belum disentuh orang lain untuk memperkuat novelty Anda.",
+    "Kutip Sumber dengan Akurat: Referensi langsung ke halaman PDF asli, menghilangkan risiko 'halusinasi' AI yang sering terjadi.",
+    "Percepat Kelulusan: Hemat waktu riset berbulan-bulan menjadi beberapa hari, sehingga Anda bisa fokus pada sidang dan publikasi."
   ];
 
   return (
@@ -16,7 +16,7 @@ const Solution: React.FC = () => {
           
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-              Hasil Nyata yang Akan Anda Dapatkan:
+              Hasil Nyata yang Akan Anda Rasakan:
             </h2>
             <ul className="space-y-6">
               {benefits.map((benefit, index) => {
@@ -31,12 +31,19 @@ const Solution: React.FC = () => {
                  )
               })}
             </ul>
-            <div className="mt-12">
+            
+            {/* Middle CTA - Green */}
+            <div className="mt-12 text-center lg:text-left">
               <a
                 href="#daftar"
-                className="inline-block bg-accent hover:bg-amber-500 text-white font-bold text-xl py-4 px-10 rounded-full shadow-lg transition-transform transform hover:-translate-y-1"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold text-xl py-4 px-12 rounded-full shadow-lg transition-transform transform hover:-translate-y-1"
               >
                 DAFTAR SEKARANG
+                <img
+                  src="/assets/right-arrow.avif"
+                  alt="Arrow"
+                  className="w-6 h-6 arrow-blink"
+                />
               </a>
             </div>
           </div>
@@ -58,6 +65,15 @@ const Solution: React.FC = () => {
 
         </div>
       </div>
+      <style>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.2; }
+        }
+        .arrow-blink {
+          animation: blink 1s infinite;
+        }
+      `}</style>
     </section>
   );
 };

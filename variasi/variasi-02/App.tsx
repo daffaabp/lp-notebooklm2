@@ -11,6 +11,7 @@ import { FAQ } from './components/FAQ';
 import { RegistrationForm } from './components/RegistrationForm';
 import { FooterLogos } from './components/FooterLogos';
 import { Footer } from './components/Footer';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 const PrivacyPolicy = React.lazy(() => import('./components/PrivacyPolicy'));
 const TermsOfService = React.lazy(() => import('./components/TermsOfService'));
@@ -101,6 +102,7 @@ function App() {
       <RegistrationForm />
       <FooterLogos />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
