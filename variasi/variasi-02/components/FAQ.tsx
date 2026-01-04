@@ -8,7 +8,7 @@ export const FAQ: React.FC = () => {
     setFaqOpen(faqOpen === index ? null : index);
   };
 
-  const faqItems = [
+  const faqs = [
     { q: "Apakah saya harus sudah punya data penelitian?", a: "Tidak perlu. Webinar ini justru membantu Anda sejak tahap pencarian ide dan studi literatur awal." },
     { q: "Apakah data saya aman di AI?", a: "Ya. Kami mengajarkan setting privasi di mana Google menjamin data riset tidak digunakan untuk melatih model publik." },
     { q: "Saya gaptek, apakah bisa ikut?", a: "Sangat bisa. Tools yang digunakan dirancang sesederhana chatting WhatsApp." }
@@ -19,7 +19,7 @@ export const FAQ: React.FC = () => {
       <div className="container max-w-3xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-slate-800 mb-10">Pertanyaan Umum (FAQ)</h2>
         <div className="space-y-4">
-          {faqItems.map((item, idx) => (
+          {faqs.map((item, idx) => (
             <div key={idx} className="border border-gray-200 rounded-xl overflow-hidden">
               <button 
                 onClick={() => toggleFaq(idx)}

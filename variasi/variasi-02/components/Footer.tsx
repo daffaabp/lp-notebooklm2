@@ -2,16 +2,25 @@ import React from 'react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-slate-400 py-16 text-center">
-      <div className="container mx-auto px-4">
-        <p className="font-bold text-white mb-4">&copy; 2026 Inovasi Akademik Digital Indonesia.</p>
-        <div className="flex justify-center gap-6 mb-8 text-sm">
-          <a href="#" className="hover:text-white transition-colors">Syarat Layanan</a>
-          <a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a>
+    <footer className="py-12 bg-gray-900 text-white text-center px-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Logos Section Removed - Moved to FooterLogos */}
+
+        <div className="mb-6 text-gray-400 text-sm max-w-2xl mx-auto text-center">
+          <p className="mb-2">Platform pembelajaran Artificial Intelligence Nomor 1 di Indonesia bagi para peneliti akademik.</p>
+          <a
+            href="https://kelasinovatif.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+          >
+            &copy; {new Date().getFullYear()} kelasinovatif.com
+          </a>
         </div>
-        <p className="text-xs max-w-2xl mx-auto opacity-50 leading-relaxed">
-          Disclaimer: Hasil yang didapatkan setiap peserta mungkin berbeda tergantung pada kedalaman sumber data dan konsistensi penerapan strategi. Webinar ini mendorong penggunaan AI secara etis sesuai integritas akademik.
-        </p>
+        <div className="flex justify-center gap-6 mt-6 text-sm text-gray-500">
+          <a href="?page=privacy-policy" className="hover:text-white transition-colors">Kebijakan Privasi</a>
+          <a href="?page=terms-of-service" className="hover:text-white transition-colors">Syarat & Ketentuan</a>
+        </div>
       </div>
     </footer>
   );
