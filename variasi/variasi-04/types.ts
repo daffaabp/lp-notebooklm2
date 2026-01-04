@@ -1,7 +1,7 @@
 export interface FormData {
     name: string;
     email: string;
-    status: string;
+    whatsapp: string;
 }
 
 export interface FAQItem {

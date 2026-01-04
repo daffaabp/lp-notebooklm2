@@ -29,8 +29,8 @@ export const Solution: React.FC = () => {
                             </li>
                         ))}
                     </ul>
-                    <div className="mt-10">
-                        <a href="#daftar" className="inline-block bg-accent text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-orange-200 hover:bg-orange-500 hover:scale-105 transition-all duration-300 text-lg">
+                    <div className="mt-12 text-center">
+                        <a href="#daftar" className="inline-block bg-green-600 text-white font-bold py-4 px-10 rounded-xl shadow-lg shadow-green-200 hover:bg-green-700 hover:scale-105 transition-all duration-300 text-xl border-b-4 border-green-800">
                             DAFTAR SEKARANG
                         </a>
                     </div>

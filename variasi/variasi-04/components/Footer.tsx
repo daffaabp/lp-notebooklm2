@@ -1,19 +1,29 @@
 import React from 'react';
+import FooterLogos from './FooterLogos';
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="bg-dark text-gray-400 py-16 px-5 text-center">
-            <div className="max-w-4xl mx-auto">
-                <p className="font-bold text-white text-lg mb-4">© 2026 Inovasi Riset Akademik Indonesia. Hak Cipta Dilindungi.</p>
-                <div className="flex justify-center gap-6 mb-8 text-sm">
-                    <a href="#" className="hover:text-white transition-colors">Syarat Layanan</a>
-                    <span className="text-gray-600">|</span>
-                    <a href="#" className="hover:text-white transition-colors">Kebijakan Privasi</a>
+        <>
+            <FooterLogos />
+            <footer className="py-12 bg-gray-900 text-white text-center px-4">
+                <div className="max-w-4xl mx-auto">
+                    <div className="mb-6 text-gray-400 text-sm max-w-2xl mx-auto text-center">
+                        <p className="mb-2">Platform pembelajaran Artificial Intelligence Nomor 1 di Indonesia bagi para peneliti akademik.</p>
+                        <a
+                            href="https://kelasinovatif.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+                        >
+                            &copy; {new Date().getFullYear()} kelasinovatif.com
+                        </a>
+                    </div>
+                    <div className="flex justify-center gap-6 mt-6 text-sm text-gray-500">
+                        <a href="?page=privacy-policy" className="hover:text-white transition-colors">Kebijakan Privasi</a>
+                        <a href="?page=terms-of-service" className="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                    </div>
                 </div>
-                <p className="text-xs leading-relaxed max-w-2xl mx-auto opacity-60">
-                    Penafian: Hasil riset tetap merupakan tanggung jawab penulis. Webinar ini berfokus pada efisiensi riset menggunakan alat bantu AI secara etis sesuai integritas akademik masing-masing institusi.
-                </p>
-            </div>
-        </footer>
+            </footer>
+        </>
     );
 };
