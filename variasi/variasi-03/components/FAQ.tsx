@@ -28,11 +28,11 @@ const FAQ: React.FC = () => {
   const faqs = [
     {
       q: "Apakah saya harus paham IT untuk menggunakan NotebookLM?",
-      a: "Tidak perlu. Penggunaannya sangat mudah, seperti mengobrol biasa dengan teman. Fokus webinar ini adalah strategi risetnya [16]."
+      a: "Tidak perlu. Penggunaannya sangat mudah, seperti mengobrol biasa dengan teman. Fokus webinar ini adalah strategi risetnya."
     },
     {
       q: "Apakah aman mengunggah naskah rahasia saya ke sini?",
-      a: "Sangat aman. Melalui akun yang benar, data Anda tidak akan digunakan oleh Google untuk melatih model AI mereka dan tetap bersifat privat [17, 18]."
+      a: "Sangat aman. Melalui akun yang benar, data Anda tidak akan digunakan oleh Google untuk melatih model AI mereka dan tetap bersifat privat."
     },
     {
       q: "Apakah strategi ini relevan untuk semua bidang keilmuan?",

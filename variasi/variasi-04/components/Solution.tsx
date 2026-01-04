@@ -10,10 +10,10 @@ export const Solution: React.FC = () => {
                     </h2>
                     <ul className="space-y-6">
                         {[
-                            { title: "Temukan Novelty Secara Presisi", text: "AI akan mencari kontradiksi antar pakar dalam 300 jurnal Anda sekaligus untuk membuktikan kebaruan riset Anda.", citation: "[6, 9]" },
-                            { title: "Akurasi Sitasi Mutlak", text: "Jawaban asisten riset ini selalu menyertakan bukti kutipan yang menunjuk langsung ke halaman PDF asli Anda.", citation: "[10, 11]" },
-                            { title: "Analisis Tanpa \"Halu\"", text: "Berbeda dengan ChatGPT, alat ini hanya bekerja berdasarkan sumber yang Anda pilih sendiri, sehingga data tetap valid dan ilmiah.", citation: "[12, 13]" },
-                            { title: "Stres Akademik Berkurang Drastis", text: "Selesaikan tinjauan pustaka hingga 60% lebih cepat dan kembalikan waktu istirahat Anda.", citation: "[14, 15]" }
+                            { title: "Temukan Novelty Secara Presisi", text: "AI akan mencari kontradiksi antar pakar dalam 300 jurnal Anda sekaligus untuk membuktikan kebaruan riset Anda.", citation: "" },
+                            { title: "Akurasi Sitasi Mutlak", text: "Jawaban asisten riset ini selalu menyertakan bukti kutipan yang menunjuk langsung ke halaman PDF asli Anda.", citation: "" },
+                            { title: "Analisis Tanpa \"Halu\"", text: "Berbeda dengan ChatGPT, alat ini hanya bekerja berdasarkan sumber yang Anda pilih sendiri, sehingga data tetap valid dan ilmiah.", citation: "" },
+                            { title: "Stres Akademik Berkurang Drastis", text: "Selesaikan tinjauan pustaka hingga 60% lebih cepat dan kembalikan waktu istirahat Anda.", citation: "" }
                         ].map((item, idx) => (
                             <li key={idx} className="flex items-start">
                                 <span className="bg-emerald-100 text-emerald-600 rounded-full p-1 mr-4 mt-1 flex-shrink-0">
@@ -23,7 +23,7 @@ export const Solution: React.FC = () => {
                                 </span>
                                 <div>
                                     <p className="text-lg text-slate-700">
-                                        <strong className="text-slate-900">{item.title}:</strong> {item.text} <span className="text-xs text-slate-400">{item.citation}</span>
+                                        <strong className="text-slate-900">{item.title}:</strong> {item.text}{item.citation && <span className="text-xs text-slate-400"> {item.citation}</span>}
                                     </p>
                                 </div>
                             </li>
@@ -42,7 +42,7 @@ export const Solution: React.FC = () => {
                         <h3 className="text-2xl font-bold text-primary mb-4 relative z-10">Solusi Kita: NotebookLM</h3>
                         <p className="text-lg text-slate-700 leading-relaxed relative z-10">
                             Google NotebookLM adalah asisten berpikir yang <b>berlabuh pada sumber dokumen Anda</b>. 
-                            Ia bukan sekadar perangkum, tapi rekan riset yang memahami konteks teknis dan akademis Anda secara utuh <span className="text-xs text-slate-500">[16, 17]</span>.
+                            Ia bukan sekadar perangkum, tapi rekan riset yang memahami konteks teknis dan akademis Anda secara utuh.
                         </p>
                         <div className="mt-6 p-4 bg-white rounded-xl shadow-sm border border-indigo-100 relative z-10">
                             <div className="flex items-center gap-3 mb-2">

@@ -57,7 +57,7 @@ const Solution: React.FC = () => {
                   <h3 className="text-2xl font-bold text-white">Mengapa NotebookLM?</h3>
                 </div>
                 <p className="text-blue-100 text-lg leading-relaxed">
-                  Berbeda dengan AI biasa yang sering mengarang jawaban (halusinasi), <strong className="text-accent">NotebookLM</strong> adalah asisten riset yang <b>hanya berbicara berdasarkan sumber Anda</b>. Setiap kalimat yang ia hasilkan dilengkapi bukti kutipan langsung ke halaman PDF aslinya [12, 13].
+                  Berbeda dengan AI biasa yang sering mengarang jawaban (halusinasi), <strong className="text-accent">NotebookLM</strong> adalah asisten riset yang <b>hanya berbicara berdasarkan sumber Anda</b>. Setiap kalimat yang ia hasilkan dilengkapi bukti kutipan langsung ke halaman PDF aslinya.
                 </p>
               </div>
             </div>

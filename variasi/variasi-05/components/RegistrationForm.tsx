@@ -4,8 +4,7 @@ const RegistrationForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    campus: '',
-    progress: ''
+    whatsapp: ''
   });
 
   const [timeLeft, setTimeLeft] = useState(2 * 60 * 60); // 2 hours in seconds
@@ -24,7 +23,7 @@ const RegistrationForm: React.FC = () => {
     return `${h} : ${m} : ${s}`;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -34,22 +33,28 @@ const RegistrationForm: React.FC = () => {
   };
 
   return (
-    <section id="daftar" className="bg-[#f8f9fa] pb-20 pt-10 px-5 relative">
-      {/* Date Info Badge */}
-      <div className="max-w-xl mx-auto text-center mb-8 relative z-20">
-        <div className="inline-block bg-[#0d47a1] text-white px-6 py-3 rounded-full shadow-lg border-2 border-white/20">
-          <p className="font-bold flex items-center justify-center gap-2">
-            <span>🗓️</span> 
-            Pelaksanaan: Sabtu, 10 Januari 2026 | 14.00 WIB
-          </p>
-        </div>
-      </div>
-
+    <section id="daftar" className="bg-[#f8f9fa] pb-20 pt-5 px-5 relative">
       <div className="max-w-2xl mx-auto bg-white p-8 md:p-12 rounded-[2rem] border-4 border-[#1a73e8] shadow-2xl relative z-10">
-        <h2 className="text-3xl font-extrabold text-center mb-2 text-[#202124]">
-          Amankan Kursi Kamu Sekarang!
-        </h2>
         
+        {/* 3 Arrow Down with Blink Animation */}
+        <div className="flex justify-center items-center gap-2 mb-4 -mt-4">
+          <img
+            src="/assets/right-arrow.avif"
+            alt="Arrow down"
+            className="w-10 h-7 md:w-14 md:h-9 arrow-blink rotate-90"
+          />
+          <img
+            src="/assets/right-arrow.avif"
+            alt="Arrow down"
+            className="w-10 h-7 md:w-14 md:h-9 arrow-blink rotate-90"
+          />
+          <img
+            src="/assets/right-arrow.avif"
+            alt="Arrow down"
+            className="w-10 h-7 md:w-14 md:h-9 arrow-blink rotate-90"
+          />
+        </div>
+
         {/* Countdown Timer */}
         <div className="bg-red-50 border border-red-100 rounded-xl p-4 mb-6 text-center">
           <p className="text-[#d93025] font-bold text-sm uppercase tracking-wide mb-1">Promo Berakhir Dalam</p>
@@ -57,22 +62,28 @@ const RegistrationForm: React.FC = () => {
             {formatTime(timeLeft)}
           </div>
         </div>
-        
-        <p className="text-center text-gray-600 mb-8 text-sm md:text-base bg-blue-50 p-4 rounded-xl">
-          🛡️ <b>100% Money Back Guarantee:</b> Kalo dalam 60 menit pertama webinar kamu ngerasa nggak dapet manfaat apa-apa, uang pendaftaran kami kembalikan utuh! [22]
-        </p>
+
+        {/* Compact Title & CTA */}
+        <div className="text-center mb-8">
+          <h2 className="text-xl md:text-2xl font-extrabold text-[#202124] leading-tight mb-3">
+            Cuma Seharga Kopi, Ilmu Kepake Seumur Hidup. <span className="text-[#d93025]">Rugi Kalau Kelewatan!</span>
+          </h2>
+          <p className="text-lg font-bold text-[#1a73e8] uppercase tracking-widest animate-pulse">
+            👇 Daftar Sekarang Juga
+          </p>
+        </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label className="block text-gray-700 font-bold mb-2 text-sm uppercase tracking-wide">
-              Nama Lengkap (Buat Sertifikat)
+              Nama Lengkap
             </label>
             <input 
               type="text" 
               name="name"
-              placeholder="Contoh: Budi Santoso"
+              placeholder="Masukkan Nama Anda"
               required
-              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1a73e8] focus:border-[#1a73e8] outline-none transition-all text-lg"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1a73e8] focus:border-[#1a73e8] outline-none transition-all text-lg bg-white"
               value={formData.name}
               onChange={handleChange}
             />
@@ -80,14 +91,14 @@ const RegistrationForm: React.FC = () => {
 
           <div>
             <label className="block text-gray-700 font-bold mb-2 text-sm uppercase tracking-wide">
-              Email Utama (Link Zoom bakal dikirim ke sini)
+              Email Aktif
             </label>
             <input 
               type="email" 
               name="email"
-              placeholder="budi@kampus.ac.id"
+              placeholder="Masukkan Email Anda"
               required
-              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1a73e8] focus:border-[#1a73e8] outline-none transition-all text-lg"
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1a73e8] focus:border-[#1a73e8] outline-none transition-all text-lg bg-white"
               value={formData.email}
               onChange={handleChange}
             />
@@ -95,51 +106,46 @@ const RegistrationForm: React.FC = () => {
 
           <div>
             <label className="block text-gray-700 font-bold mb-2 text-sm uppercase tracking-wide">
-              Asal Kampus
+              Nomor WhatsApp
             </label>
             <input 
-              type="text" 
-              name="campus"
-              placeholder="Contoh: Universitas Indonesia"
+              type="tel" 
+              name="whatsapp"
+              placeholder="08xxxxxxxxxx"
               required
-              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1a73e8] focus:border-[#1a73e8] outline-none transition-all text-lg"
-              value={formData.campus}
+              className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1a73e8] focus:border-[#1a73e8] outline-none transition-all text-lg bg-white"
+              value={formData.whatsapp}
               onChange={handleChange}
             />
           </div>
 
-          <div>
-            <label className="block text-gray-700 font-bold mb-2 text-sm uppercase tracking-wide">
-              Progres Skripsi Kamu Sekarang
-            </label>
-            <div className="relative">
-              <select 
-                name="progress"
-                required
-                className="w-full p-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-[#1a73e8] focus:border-[#1a73e8] outline-none transition-all text-lg appearance-none bg-white"
-                value={formData.progress}
-                onChange={handleChange}
-              >
-                <option value="">-- Pilih Status --</option>
-                <option value="ide">Masih Cari Ide / Judul</option>
-                <option value="bab1">Lagi Ngerjain Bab 1-3</option>
-                <option value="revisi">Stuck di Revisi Melulu</option>
-                <option value="sidang">Otw Sidang / Pendadaran</option>
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
-                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-              </div>
+          <div className="mt-4">
+            <button 
+              type="submit" 
+              className="w-full bg-[#16a34a] text-white font-extrabold text-xl py-5 rounded-xl uppercase hover:bg-green-700 transition-colors shadow-lg animate-pulse shadow-green-500/30"
+            >
+              DAFTAR SEKARANG
+            </button>
+            
+            <div className="flex items-center justify-center gap-2 mt-4 text-gray-500 text-sm font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <span>Pembayaran 100% Aman & Terjamin</span>
             </div>
           </div>
-
-          <button 
-            type="submit" 
-            className="w-full bg-[#f9ab00] text-white font-extrabold text-xl py-5 rounded-xl uppercase hover:bg-amber-500 transition-colors shadow-lg mt-4 animate-pulse"
-          >
-            DAFTAR SEKARANG
-          </button>
         </form>
       </div>
+
+      <style>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.2; }
+        }
+        .arrow-blink {
+          animation: blink 1s infinite;
+        }
+      `}</style>
     </section>
   );
 };

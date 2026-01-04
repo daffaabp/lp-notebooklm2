@@ -9,17 +9,8 @@ const SolutionSection: React.FC = () => {
         </h2>
         
         <p className="text-lg md:text-xl text-[#202124] max-w-4xl mx-auto mb-12 leading-relaxed">
-          NotebookLM bukan AI biasa yang suka berhalusinasi. Dia adalah asisten yang 100% patuh sama dokumen yang kamu kasih [17, 18]. Kamu tinggal kasih PDF-nya, dan dia bakal bantu kamu "ngobrol" sama isi jurnal itu, bikin peta pikiran visual, sampe nemuin celah riset yang bikin dospem kamu kaget! [11, 19].
+          NotebookLM bukan AI biasa yang suka berhalusinasi. Dia adalah asisten yang 100% patuh sama dokumen yang kamu kasih. Kamu tinggal kasih PDF-nya, dan dia bakal bantu kamu "ngobrol" sama isi jurnal itu, bikin peta pikiran visual, sampe nemuin celah riset yang bikin dospem kamu kaget!
         </p>
-
-        <div className="bg-white border-l-8 border-[#1a73e8] p-8 md:p-10 text-left rounded-r-xl shadow-sm">
-          <p className="text-gray-600 text-lg md:text-xl italic leading-relaxed mb-6">
-            "Sumpah, ini hacks paling gila buat mahasiswa! Dulu aku butuh waktu berminggu-minggu cuma buat bikin Bab 2. Pake cara ini, aku beresin tinjauan pustaka 30 jurnal cuma dalam satu sore. Skripsi aku jadi jauh lebih ilmiah dan valid!"
-          </p>
-          <p className="font-extrabold text-[#1a73e8] text-base md:text-lg">
-            — Mahasiswa S1 Tingkat Akhir (Alumni Batch Sebelumnya)
-          </p>
-        </div>
       </div>
     </section>
   );

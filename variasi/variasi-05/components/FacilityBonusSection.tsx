@@ -8,7 +8,7 @@ const FacilityBonusSection: React.FC = () => {
           Apa Saja Yang Bakal Kamu Dapetin?
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 gap-8 items-stretch mb-12">
           {/* Facilities Column */}
           <div className="bg-[#f8f9fa] rounded-3xl p-8 md:p-12 border-2 border-gray-100 shadow-sm flex flex-col">
             <h3 className="text-2xl font-extrabold text-[#0d47a1] mb-8 flex items-center gap-3">
@@ -73,6 +73,13 @@ const FacilityBonusSection: React.FC = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Money Back Guarantee */}
+        <div className="bg-[#e3f2fd] border border-blue-200 rounded-2xl p-6 text-center max-w-3xl mx-auto">
+          <p className="text-[#0d47a1] text-sm md:text-base leading-relaxed">
+            🛡️ <b>100% Money Back Guarantee:</b> Kalo dalam 60 menit pertama webinar kamu ngerasa nggak dapet manfaat apa-apa, uang pendaftaran kami kembalikan utuh!
+          </p>
         </div>
       </div>
     </section>
