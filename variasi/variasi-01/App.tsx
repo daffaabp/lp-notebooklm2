@@ -7,8 +7,8 @@ const MidCTA = React.lazy(() => import('./components/MidCTA'));
 const Speaker = React.lazy(() => import('./components/Speaker'));
 const Testimonials = React.lazy(() => import('./components/Testimonials'));
 const BonusFasilitas = React.lazy(() => import('./components/BonusFasilitas'));
-const RegistrationForm = React.lazy(() => import('./components/RegistrationForm'));
 const FAQ = React.lazy(() => import('./components/FAQ'));
+const RegistrationForm = React.lazy(() => import('./components/RegistrationForm'));
 const Footer = React.lazy(() => import('./components/Footer'));
 const FooterLogos = React.lazy(() => import('./components/FooterLogos'));
 const WhatsAppButton = React.lazy(() => import('./components/WhatsAppButton'));
@@ -101,8 +101,8 @@ const App: React.FC = () => {
         <Speaker />
         <Testimonials />
         <BonusFasilitas />
-        <RegistrationForm />
         <FAQ />
+        <RegistrationForm />
         <FooterLogos />
         <Footer />
         <WhatsAppButton />

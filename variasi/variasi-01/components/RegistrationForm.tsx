@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, Loader2, Shield, AlertCircle, Calendar, Clock, Video } from 'lucide-react';
+import { CheckCircle, Loader2, Shield, AlertCircle, Calendar, Clock, Video, DollarSign } from 'lucide-react';
 import UrgencyTimer from './UrgencyTimer';
 
 const RegistrationForm: React.FC = () => {
@@ -49,7 +49,7 @@ const RegistrationForm: React.FC = () => {
       if (window.fbq) {
         // @ts-ignore
         window.fbq('track', 'InitiateCheckout', {
-          value: 129000,
+          value: 149000,
           currency: 'IDR',
           content_name: 'Webinar NotebookLM',
           num_ids: 1
@@ -108,34 +108,49 @@ const RegistrationForm: React.FC = () => {
 
   return (
     <section id="register" className="py-20 px-4 bg-gradient-to-br from-[#1a365d] to-[#2b6cb0] text-white">
-      {/* Event Details Header */}
-      <div className="max-w-4xl mx-auto mb-12 text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
-        <div className="inline-flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 bg-white/10 backdrop-blur-md rounded-2xl md:rounded-full px-8 py-5 border border-white/20 shadow-xl">
-          <div className="flex items-center gap-3">
-            <Calendar className="w-6 h-6 text-orange-400" />
-            <div className="text-left">
-              <p className="text-[10px] uppercase tracking-wider text-blue-200">Tanggal</p>
-              <p className="font-bold text-white text-base md:text-lg">Sabtu, 27 Desember 2025</p>
+      {/* Call to Action & Event Details */}
+      <div className="max-w-3xl mx-auto mb-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        {/* Ajakan & head */}
+        <div className="mb-5 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">Yuk, Ikuti Webinar Ini!</h3>
+          <p className="text-blue-100 text-base md:text-lg">Dapatkan ilmu praktis & bonus eksklusif untuk Anda</p>
+        </div>
+
+        {/* Compact, precise, and neat event info in grid */}
+        <div className="bg-white/20 backdrop-blur-lg rounded-xl shadow-md border border-white/25 px-2 md:px-6 py-4 md:py-3 grid grid-cols-2 md:grid-cols-4 gap-3 items-stretch text-left">
+          {/* Tanggal */}
+          <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-white/10 transition">
+            <Calendar className="w-6 h-6 text-orange-400 flex-shrink-0" strokeWidth={2} />
+            <div>
+              <p className="text-base uppercase tracking-wider text-white/70 font-semibold mb-0.5 leading-normal">Tanggal</p>
+              <p className="font-bold text-white text-base leading-tight whitespace-nowrap">Sabtu, 10 Jan 2026</p>
             </div>
           </div>
-
-          <div className="hidden md:block w-px h-8 bg-white/20"></div>
-
-          <div className="flex items-center gap-3">
-            <Clock className="w-6 h-6 text-orange-400" />
-            <div className="text-left">
-              <p className="text-[10px] uppercase tracking-wider text-blue-200">Waktu</p>
-              <p className="font-bold text-white text-base md:text-lg">19.00 - 21.00 WIB</p>
+          {/* Jam */}
+          <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-white/10 transition border-l border-white/10 md:border-l-0 md:border-t md:border-white/10">
+            <Clock className="w-6 h-6 text-orange-400 flex-shrink-0" strokeWidth={2} />
+            <div>
+              <p className="text-base uppercase tracking-wider text-white/70 font-semibold mb-0.5 leading-normal">Jam</p>
+              <p className="font-bold text-white text-base leading-tight">14.00 - 16.00 WIB</p>
             </div>
           </div>
-
-          <div className="hidden md:block w-px h-8 bg-white/20"></div>
-
-          <div className="flex items-center gap-3">
-            <Video className="w-6 h-6 text-orange-400" />
-            <div className="text-left">
-              <p className="text-[10px] uppercase tracking-wider text-blue-200">Tempat</p>
-              <p className="font-bold text-white text-base md:text-lg">Live via Zoom Meeting</p>
+          {/* Tempat */}
+          <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-white/10 transition md:border-l border-white/10">
+            <Video className="w-6 h-6 text-orange-400 flex-shrink-0" strokeWidth={2} />
+            <div>
+              <p className="text-base uppercase tracking-wider text-white/70 font-semibold mb-0.5 leading-normal">Tempat</p>
+              <p className="font-bold text-white text-base leading-tight whitespace-nowrap">Zoom Meeting</p>
+            </div>
+          </div>
+          {/* Harga */}
+          <div className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-white/10 transition border-l border-white/10">
+            <DollarSign className="w-6 h-6 text-orange-400 flex-shrink-0" strokeWidth={2} />
+            <div>
+              <p className="text-base uppercase tracking-wider text-white/70 font-semibold mb-0.5 leading-normal">Harga</p>
+              <div className="flex flex-col gap-0.5">
+                <span className="text-white/50 text-base line-through decoration-red-400 decoration-2 font-medium">Rp 499.000</span>
+                <span className="font-bold text-white text-base tracking-tight">Rp 149.000</span>
+              </div>
             </div>
           </div>
         </div>
@@ -177,19 +192,9 @@ const RegistrationForm: React.FC = () => {
 
             <h2 className="text-3xl font-bold text-center mb-6">Daftar Sekarang</h2>
 
-
-            {/* Harga Coret & Countdown Timer */}
-            <div className="mb-6">
-              <div className="text-center mb-3">
-                <span className="text-base font-normal text-gray-500">
-                  <span className="line-through mr-2">Rp 499.000</span>
-                  <span className="text-red-600 font-bold text-xl">Rp 129.000</span>
-                </span>
-              </div>
-              {/* Timer */}
-              <div className="bg-red-50 py-3 rounded-lg border border-red-100">
-                <UrgencyTimer variant="on-white" label="Diskon Berakhir Dalam:" />
-              </div>
+            {/* Timer */}
+            <div className="mb-6 bg-red-50 py-3 rounded-lg border border-red-100">
+              <UrgencyTimer variant="on-white" label="Diskon Berakhir Dalam:" />
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-3">
